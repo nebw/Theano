@@ -177,6 +177,7 @@ def lock(tmp_dir, timeout=notset, min_wait=None, max_wait=None, verbosity=1):
         Amount of feedback displayed to screen (default 1).
 
     """
+    return True
     if min_wait is None:
         min_wait = config.compile.wait
     if max_wait is None:
@@ -356,6 +357,7 @@ class Unlocker(object):
         their timeout limit).
 
         """
+        return True
         # If any error occurs, we assume this is because someone else tried to
         # unlock this directory at the same time.
         # Note that it is important not to have both remove statements within
